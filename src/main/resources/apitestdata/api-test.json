@@ -1,0 +1,34 @@
+{
+  "qa": {
+    "testData": [
+      {
+        "testCaseName": "Validate /product API - limit-3",
+        "testCaseDescription": "Validate products size of limit 3",
+        "payload": "testpayload",
+        "expectedData": "test expected data"
+      },
+      {
+        "testCaseName": "Validate /product API - limit-1",
+        "testCaseDescription": "Validate products size of limit 1",
+        "payload": "",
+        "expectedData": ""
+      }
+    ]
+  },
+  "pre-prod": {
+    "testData": [
+      {
+        "testCaseName": "Validate /product API - limit-3",
+        "testCaseDescription": "Validate products size of limit 3",
+        "payload": "",
+        "expectedData": ""
+      },
+      {
+        "testCaseName": "Validate /product API - limit-1",
+        "testCaseDescription": "Validate products size of limit 1",
+        "payload": "",
+        "expectedData": ""
+      }
+    ]
+  }
+}
