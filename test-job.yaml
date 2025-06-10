@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: automation-test-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: automation-tests
+          image: nitzperdoc/hybrid-test-automation-framework:latest
+          imagePullPolicy: Always
+          command: ["sh", "-c", "./entrypoint.sh"]
+          env:
+            - name: RUNTYPE
+              value: "API"
+            - name: XMLFILEPATH
+              value: "/app/src/test/resources/testng/api-testng.xml"
+            - name: ENV
+              value: "QA"
+            - name: BROWSER
+              value: "chrome"
+      restartPolicy: Never
+  backoffLimit: 1
